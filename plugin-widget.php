@@ -49,11 +49,12 @@ class Inceptive500pxImageShowcaseWidget extends WP_Widget {
 		$json = file_get_contents($url);
 		$photos = json_decode($json, TRUE);
 				
-		echo $before_widget;
+		if(isset($before_widget))
+			echo $before_widget;
 		
 		echo "<h2>".$instance['title']."</h2>";
     
-		$return_string .= '<div class="gallery clearfix">';
+		$return_string = '<div class="gallery clearfix">';
 		
 		$i=1;		
 		foreach ($photos['photos'] as $photo) {
@@ -76,7 +77,8 @@ class Inceptive500pxImageShowcaseWidget extends WP_Widget {
 		
 		echo $return_string;
 		
-		echo $after_widget;
+		if(isset($after_widget))
+			echo $after_widget;
 		
 	} // end widget
 	

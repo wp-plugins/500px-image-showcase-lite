@@ -15,6 +15,9 @@ class Inceptive500pxImageShowcaseShortcode {
 	private $num;
 	private $tag;
 	private $term;
+	
+	private $caption;
+	private $post_or_page;
 
 	public function __construct($consumerKey) {
 
@@ -44,6 +47,9 @@ class Inceptive500pxImageShowcaseShortcode {
 		$this->tag = (isset($atts['tag'])) ? str_replace(" ","&nbsp;",$atts['tag']) : '';
 		$this->term = (isset($atts['term'])) ? str_replace(" ","&nbsp;",$atts['term']) : '';
 		
+		$this->caption = (isset($atts['caption'])) ? $atts['caption'] : 'on';
+		$this->post_or_page = (isset($atts['post_or_page'])) ? $atts['post_or_page'] : '1';
+		
 		if($this->feature=='tag'){
 			$url= 'https://api.500px.com/v1/photos/search?consumer_key=' . $this->consumerKey_500px . '&tag='.$this->tag.'&rpp=' . $this->num;
 		}
@@ -53,16 +59,16 @@ class Inceptive500pxImageShowcaseShortcode {
 		$json = file_get_contents($url);
 		$photos = json_decode($json, TRUE);
 		
-		if(!is_single() && !is_page())
+		if($this->post_or_page && (!is_single() && !is_page()))
 			return;
-		
-		return $this->inceptive_500px_image_showcase_shortcode_gallery($photos);
+				
+		return $this->inceptive_500px_image_showcase_shortcode_gallery($photos, $this->caption);
 	}
 	
 	
-	function inceptive_500px_image_showcase_shortcode_gallery($photos) {
-
-		$return_string .= '<div id="inceptive-500px-image-showcase-gallery" class="inceptive-500px-image-showcase-gallery">';
+	function inceptive_500px_image_showcase_shortcode_gallery($photos,$caption='on') {
+	
+		$return_string = '<div id="inceptive-500px-image-showcase-gallery" class="inceptive-500px-image-showcase-gallery">';
 			
 		foreach ($photos['photos'] as $photo) {
 			$return_string .= '<div class="inceptive-500px-image-showcase-gallery-image">';
@@ -72,7 +78,10 @@ class Inceptive500pxImageShowcaseShortcode {
 			
 			$return_string .= '<img alt="' . $photo['name'] . '" title="' . $photo['name'] . '" src="' . $photourl . '" />';
 			$return_string .= '<div class="inceptive-500px-image-showcase-gallery-caption">';
-			$return_string .= '<strong><a href="'.$photolink.'" target="_blank">' . $photo['name'] . '</a></strong><br/><em>' . substr($photo['description'],0,130). '</em>';
+			
+			if($caption!='off')
+				$return_string .= '<strong><a href="'.$photolink.'" target="_blank">' . $photo['name'] . '</a></strong><br/><em>' . substr($photo['description'],0,130). '</em>';
+					
 			$return_string .= '</div>';
 			$return_string .= '</div>';
 		}
