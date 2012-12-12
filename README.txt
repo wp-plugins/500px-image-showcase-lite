@@ -1,14 +1,12 @@
 === 500px Image Showcase Lite ===
-Contributors: Inceptive Design Labs
+Contributors: inceptive
 Plugin Name: 500px Image Showcase Lite
 Plugin URI: http://extend.inceptive.gr/500px-image-showcase-lite/
 Author URI: http://www.inceptive.gr
 Author: Inceptive Design Labs
-Donate link: 
 Tags: 500px, image, gallery, showcase, slider
 Requires at least: 2.9.0
 Tested up to: 3.5
-Stable tag: 1.1
 Version: 1.1
 License: GPLv2 or later
 
