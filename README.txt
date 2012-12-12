@@ -16,7 +16,7 @@ Image showcase from 500px photography community.
 
 == Description ==
 
-Image showcase from 500px photography community. This lite version of 500px Image Showcase does not include the full set of features that are available in the premium version. To see all the features available in the premium versions, check our [extensions website](http://extend.inceptive.gr/500px-image-showcase/ "Inceptive Extensions")>.
+Image showcase from 500px photography community. This lite version of 500px Image Showcase does not include the full set of features that are available in the premium version. To see all the features available in the premium versions, check our [extensions website](http://extend.inceptive.gr/500px-image-showcase/ "Inceptive Extensions").
 
 = Shortcode =
 
