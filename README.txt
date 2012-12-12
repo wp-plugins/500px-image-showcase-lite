@@ -29,6 +29,10 @@ The shortcode must have the form [500px feature="popular"]. The arguments you ca
 * caption: "on" for showing captions or "off" for not showing (default is "on")
 * post_or_page: "1" for showing only in posts and pages or "0" for showing everywhere (default is "1")
 
+Example:
+
+[500px feature="user_favorites" username="tchebotarev" num="5" caption="off" post_or_page="1"]
+
 = Widget =
 
 Go to Appearance -> Widgets and ".:: Inceptive: ::.&nbsp;500px Widget" in the sidebar you want. Set the options of the widget and you are ready!
