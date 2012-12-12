@@ -4,7 +4,7 @@
   Plugin Name: 500px Image Showcase Lite
   Plugin URI: http://extend.inceptive.gr/500px-image-showcase-lite/
   Description: Image showcase from 500px photography community. This lite version of 500px Image Showcase does not include the full set of features that are available in the premium version. To see all the features available in the premium versions, check our <a target="_blank" href="http://extend.inceptive.gr/500px-image-showcase/">extensions website</a>.
-  Version: 1.0
+  Version: 1.1
   Author: Inceptive Design Labs
   Author URI: http://www.inceptive.gr
   Author Email: extend@inceptive.gr
