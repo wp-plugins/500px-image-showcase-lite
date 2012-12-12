@@ -35,7 +35,7 @@ Example:
 
 = Widget =
 
-Go to Appearance -> Widgets and ".:: Inceptive: ::.&nbsp;500px Widget" in the sidebar you want. Set the options of the widget and you are ready!
+Go to Appearance -> Widgets and add ".:: Inceptive: ::.&nbsp;500px Widget" in the sidebar you want. Set the options of the widget and you are ready!
 
 == Installation ==
 
