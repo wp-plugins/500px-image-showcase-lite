@@ -17,8 +17,7 @@ Image showcase from 500px photography community.
 == Description ==
 
 Image showcase from 500px photography community. This lite version of 500px Image Showcase does not include the full set of features that are available in the premium version. To see all the features available in the premium versions, check our [extensions website](http://extend.inceptive.gr/500px-image-showcase/ "Inceptive Extensions")>.
-
-=== Shortcode ===
+== Shortcode =
 
 The shortcode must have the form [500px feature="popular"]. The arguments you can use are:
 
@@ -29,7 +28,7 @@ The shortcode must have the form [500px feature="popular"]. The arguments you ca
 * caption: "on" for showing captions or "off" for not showing (default is "on")
 * post_or_page: "1" for showing only in posts and pages or "0" for showing everywhere (default is "1")
 
-=== Widget ===
+= Widget =
 
 Go to Appearance -> Widgets and ".:: Inceptive: ::.&nbsp;500px Widget" in the sidebar you want. Set the options of the widget and you are ready!
 
